@@ -1,21 +1,19 @@
-function solicitarNombre(){ 
+function solicitarDatos(){ 
     let nombre=prompt("ingrese su nombre")
-}
+    let apellido=prompt("ingrese su apellido: (para continuar: continuar)");
+    while (apellido != "continuar"){
+        apellido = prompt("Ingrese su apellido: (para continuar ingrese: continuar)");
+    }
+}   
+solicitarDatos()
 
-let apellido=prompt("ingrese su apellido: (si no quiere dar su apellido:ingrese continuar)");
-while(apellido != "continuar"){
-    apellido=prompt("ingrese su apellido: (para continuar:ingrese continuar)")
-}
 
 let edad= parseInt(prompt("ingrese su edad"))
-
 if(edad < 18) { 
     alert("solo mayores de 18 años pueden manejar")
     }
-
 else {
-    alert("felictaciones capaz que puedas dejar de pedalear"  +  nombre)
-
+    alert("felictaciones capaz que puedas dejar de pedalear")
 
 let nivelDeConocimiento= prompt("ingrese su nivel de conocimiento (cero, medio, punto caramelo)  ")
 switch (nivelDeConocimiento){
@@ -28,7 +26,6 @@ switch (nivelDeConocimiento){
     case "punto caramelo":
         alert(" De acá salis poniendo primera!!");
         break
-
 }
 }
 
